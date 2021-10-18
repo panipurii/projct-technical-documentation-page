@@ -6,6 +6,10 @@ body {
   line-height: 1.5;
 }
 
+img {
+  width: 500px;
+}
+
 #navbar {
   position: fixed;
   min-width: 290px;
@@ -86,6 +90,7 @@ code {
 }
 
 @media only screen and (max-width: 815px) {
+
   /* For mobile phones: */
   #navbar ul {
     border: 1px solid;

@@ -1,426 +1,475 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <nav id="navbar">
-        <header>JS Documentation</header>
-        <ul>
-            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
-            <li>
-              <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
-            </li>
-            <li>
-              <a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a>
-            </li>
-            <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
-            <li><a class="nav-link" href="#Variables">Variables</a></li>
-            <li>
-              <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
-            </li>
-            <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
-            <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
-            <li><a class="nav-link" href="#Constants">Constants</a></li>
-            <li><a class="nav-link" href="#Data_types">Data types</a></li>
-            <li>
-              <a class="nav-link" href="#if...else_statement">if...else statement</a>
-            </li>
-            <li><a class="nav-link" href="#while_statement">while statement</a></li>
-            <li>
-              <a class="nav-link" href="#Function_declarations">Function declarations</a>
-            </li>
-            <li><a class="nav-link" href="#Reference">Reference</a></li>
-          </ul>
-    </nav>
+  <nav id="navbar">
+    <header>React documentation</header>
+    <ul>
+      <li><a class="nav-link" href="#Hello React">Hello React</a></li>
+      <li>
+        <a class="nav-link" href="#How does React use JavaScript?">How does React use JavaScript?</a>
+      </li>
+      <li>
+        <a class="nav-link" href="Setting up your first React app">Setting up your first React app</a>
+      </li>
+      <li><a class="nav-link" href="Exploring our first React component — App">Exploring our first React component —
+          App</a></li>
+      <li><a class="nav-link" href="#Interrogating the index">Interrogating the index</a></li>
+      <li>
+        <a class="nav-link" href="#Variables and props">Variables and props</a>
+      </li>
+      <li><a class="nav-link" href="#Summary">Summary</a></li>
+      <li><a class="nav-link" href="#Reference">Reference</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
     <main id="main-doc">
-        <main id="main-doc">
-            <section class="main-section" id="Introduction">
-              <header>Introduction</header>
-              <article>
-                <p>
-                  JavaScript is a cross-platform, object-oriented scripting language. It
-                  is a small and lightweight language. Inside a host environment (for
-                  example, a web browser), JavaScript can be connected to the objects of
-                  its environment to provide programmatic control over them.
-                </p>
-          
-                <p>
-                  JavaScript contains a standard library of objects, such as Array, Date,
-                  and Math, and a core set of language elements such as operators, control
-                  structures, and statements. Core JavaScript can be extended for a
-                  variety of purposes by supplementing it with additional objects; for
-                  example:
-                </p>
-                <ul>
-                  <li>
-                    Client-side JavaScript extends the core language by supplying objects
-                    to control a browser and its Document Object Model (DOM). For example,
-                    client-side extensions allow an application to place elements on an
-                    HTML form and respond to user events such as mouse clicks, form input,
-                    and page navigation.
-                  </li>
-                  <li>
-                    Server-side JavaScript extends the core language by supplying objects
-                    relevant to running JavaScript on a server. For example, server-side
-                    extensions allow an application to communicate with a database,
-                    provide continuity of information from one invocation to another of
-                    the application, or perform file manipulations on a server.
-                  </li>
-                </ul>
-              </article>
-            </section>
-            <section class="main-section" id="What_you_should_already_know">
-              <header>What you should already know</header>
-              <article>
-                <p>This guide assumes you have the following basic background:</p>
-          
-                <ul>
-                  <li>
-                    A general understanding of the Internet and the World Wide Web (WWW).
-                  </li>
-                  <li>Good working knowledge of HyperText Markup Language (HTML).</li>
-                  <li>
-                    Some programming experience. If you are new to programming, try one of
-                    the tutorials linked on the main page about JavaScript.
-                  </li>
-                </ul>
-              </article>
-            </section>
-            <section class="main-section" id="JavaScript_and_Java">
-              <header>JavaScript and Java</header>
-              <article>
-                <p>
-                  JavaScript and Java are similar in some ways but fundamentally different
-                  in some others. The JavaScript language resembles Java but does not have
-                  Java's static typing and strong type checking. JavaScript follows most
-                  Java expression syntax, naming conventions and basic control-flow
-                  constructs which was the reason why it was renamed from LiveScript to
-                  JavaScript.
-                </p>
-          
-                <p>
-                  In contrast to Java's compile-time system of classes built by
-                  declarations, JavaScript supports a runtime system based on a small
-                  number of data types representing numeric, Boolean, and string values.
-                  JavaScript has a prototype-based object model instead of the more common
-                  class-based object model. The prototype-based model provides dynamic
-                  inheritance; that is, what is inherited can vary for individual objects.
-                  JavaScript also supports functions without any special declarative
-                  requirements. Functions can be properties of objects, executing as
-                  loosely typed methods.
-                </p>
-                <p>
-                  JavaScript is a very free-form language compared to Java. You do not
-                  have to declare all variables, classes, and methods. You do not have to
-                  be concerned with whether methods are public, private, or protected, and
-                  you do not have to implement interfaces. Variables, parameters, and
-                  function return types are not explicitly typed.
-                </p>
-              </article>
-            </section>
-            <section class="main-section" id="Hello_world">
-              <header>Hello world</header>
-              <article>
-                To get started with writing JavaScript, open the Scratchpad and write your
-                first "Hello world" JavaScript code:
-                <code>function greetMe(yourName) { alert("Hello " + yourName); }
-                  greetMe("World");
-                </code>
-          
-                Select the code in the pad and hit Ctrl+R to watch it unfold in your
-                browser!
-              </article>
-            </section>
-            <section class="main-section" id="Variables">
-              <header>Variables</header>
-              <p>
-                You use variables as symbolic names for values in your application. The
-                names of variables, called identifiers, conform to certain rules.
-              </p>
-              <p>
-                A JavaScript identifier must start with a letter, underscore (_), or
-                dollar sign ($); subsequent characters can also be digits (0-9). Because
-                JavaScript is case sensitive, letters include the characters "A" through
-                "Z" (uppercase) and the characters "a" through "z" (lowercase).
-              </p>
-              <p>
-                You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers.
-                You can also use the Unicode escape sequences as characters in
-                identifiers. Some examples of legal names are Number_hits, temp99, and
-                _name.
-              </p>
-            </section>
-            <section class="main-section" id="Declaring_variables">
-              <header>Declaring variables</header>
-              <article>
-                You can declare a variable in three ways:
-                <p>
-                  With the keyword var. For example, <code>var x = 42.</code> This syntax
-                  can be used to declare both local and global variables.
-                </p>
-                <p>
-                  By simply assigning it a value. For example, <code>x = 42.</code> This
-                  always declares a global variable. It generates a strict JavaScript
-                  warning. You shouldn't use this variant.
-                </p>
-                <p>
-                  With the keyword let. For example,<code> let y = 13.</code> This syntax
-                  can be used to declare a block scope local variable. See Variable scope
-                  below.
-                </p>
-              </article>
-            </section>
-            <section class="main-section" id="Variable_scope">
-              <header>Variable scope</header>
-              <article>
-                <p>
-                  When you declare a variable outside of any function, it is called a
-                  global variable, because it is available to any other code in the
-                  current document. When you declare a variable within a function, it is
-                  called a local variable, because it is available only within that
-                  function.
-                </p>
-          
-                <p>
-                  JavaScript before ECMAScript 2015 does not have block statement scope;
-                  rather, a variable declared within a block is local to the function (or
-                  global scope) that the block resides within. For example the following
-                  code will log 5, because the scope of x is the function (or global
-                  context) within which x is declared, not the block, which in this case
-                  is an if statement.
-                </p>
-                <code>if (true) { var x = 5; } console.log(x); // 5</code>
-                <p>
-                  This behavior changes, when using the let declaration introduced in
-                  ECMAScript 2015.
-                </p>
-          
-                <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
-                  defined</code>
-              </article>
-            </section>
-            <section class="main-section" id="Global_variables">
-              <header>Global variables</header>
-              <article>
-                <p>
-                  Global variables are in fact properties of the global object. In web
-                  pages the global object is window, so you can set and access global
-                  variables using the window.variable syntax.
-                </p>
-          
-                <p>
-                  Consequently, you can access global variables declared in one window or
-                  frame from another window or frame by specifying the window or frame
-                  name. For example, if a variable called phoneNumber is declared in a
-                  document, you can refer to this variable from an iframe as
-                  parent.phoneNumber.
-                </p>
-              </article>
-            </section>
-            <section class="main-section" id="Constants">
-              <header>Constants</header>
-              <article>
-                <p>
-                  You can create a read-only, named constant with the const keyword. The
-                  syntax of a constant identifier is the same as for a variable
-                  identifier: it must start with a letter, underscore or dollar sign and
-                  can contain alphabetic, numeric, or underscore characters.
-                </p>
-          
-                <code>const PI = 3.14;</code>
-                <p>
-                  A constant cannot change value through assignment or be re-declared
-                  while the script is running. It has to be initialized to a value.
-                </p>
-          
-                <p>
-                  The scope rules for constants are the same as those for let block scope
-                  variables. If the const keyword is omitted, the identifier is assumed to
-                  represent a variable.
-                </p>
-          
-                <p>
-                  You cannot declare a constant with the same name as a function or
-                  variable in the same scope. For example:
-                </p>
-          
-                <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL
-                  CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements
-                  }</code>
-                However, object attributes are not protected, so the following statement
-                is executed without problems.
-                <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code>
-              </article>
-            </section>
-            <section class="main-section" id="Data_types">
-              <header>Data types</header>
-              <article>
-                <p>The latest ECMAScript standard defines seven data types:</p>
-                <ul>
-                  <li>
-                    <p>Six data types that are primitives:</p>
-                    <ul>
-                      <li>Boolean. true and false.</li>
-                      <li>
-                        null. A special keyword denoting a null value. Because JavaScript
-                        is case-sensitive, null is not the same as Null, NULL, or any
-                        other variant.
-                      </li>
-                      <li>undefined. A top-level property whose value is undefined.</li>
-                      <li>Number. 42 or 3.14159.</li>
-                      <li>String. "Howdy"</li>
-                      <li>
-                        Symbol (new in ECMAScript 2015). A data type whose instances are
-                        unique and immutable.
-                      </li>
-                    </ul>
-                  </li>
-          
-                  <li>and Object</li>
-                </ul>
-                Although these data types are a relatively small amount, they enable you
-                to perform useful functions with your applications. Objects and functions
-                are the other fundamental elements in the language. You can think of
-                objects as named containers for values, and functions as procedures that
-                your application can perform.
-              </article>
-            </section>
-            <section class="main-section" id="if...else_statement">
-              <header>if...else statement</header>
-              <article>
-                Use the if statement to execute a statement if a logical condition is
-                true. Use the optional else clause to execute a statement if the condition
-                is false. An if statement looks as follows:
-          
-                <code>if (condition) { statement_1; } else { statement_2; }</code>
-                condition can be any expression that evaluates to true or false. See
-                Boolean for an explanation of what evaluates to true and false. If
-                condition evaluates to true, statement_1 is executed; otherwise,
-                statement_2 is executed. statement_1 and statement_2 can be any statement,
-                including further nested if statements.
-                <p>
-                  You may also compound the statements using else if to have multiple
-                  conditions tested in sequence, as follows:
-                </p>
-                <code>if (condition_1) { statement_1; } else if (condition_2) { statement_2;
-                  } else if (condition_n) { statement_n; } else { statement_last; }
-                </code>
-                In the case of multiple conditions only the first logical condition which
-                evaluates to true will be executed. To execute multiple statements, group
-                them within a block statement ({ ... }) . In general, it's good practice
-                to always use block statements, especially when nesting if statements:
-          
-                <code>if (condition) { statement_1_runs_if_condition_is_true;
-                  statement_2_runs_if_condition_is_true; } else {
-                  statement_3_runs_if_condition_is_false;
-                  statement_4_runs_if_condition_is_false; }</code>
-                It is advisable to not use simple assignments in a conditional expression,
-                because the assignment can be confused with equality when glancing over
-                the code. For example, do not use the following code:
-                <code>if (x = y) { /* statements here */ }</code> If you need to use an
-                assignment in a conditional expression, a common practice is to put
-                additional parentheses around the assignment. For example:
-          
-                <code>if ((x = y)) { /* statements here */ }</code>
-              </article>
-            </section>
-            <section class="main-section" id="while_statement">
-              <header>while statement</header>
-              <article>
-                A while statement executes its statements as long as a specified condition
-                evaluates to true. A while statement looks as follows:
-          
-                <code>while (condition) statement</code> If the condition becomes false,
-                statement within the loop stops executing and control passes to the
-                statement following the loop.
-          
-                <p>
-                  The condition test occurs before statement in the loop is executed. If
-                  the condition returns true, statement is executed and the condition is
-                  tested again. If the condition returns false, execution stops and
-                  control is passed to the statement following while.
-                </p>
-          
-                <p>
-                  To execute multiple statements, use a block statement ({ ... }) to group
-                  those statements.
-                </p>
-          
-                Example:
-          
-                <p>The following while loop iterates as long as n is less than three:</p>
-          
-                <code>var n = 0; var x = 0; while (n &lt; 3) { n++; x += n; }</code>
-                <p>
-                  With each iteration, the loop increments n and adds that value to x.
-                  Therefore, x and n take on the following values:
-                </p>
-          
-                <ul>
-                  <li>After the first pass: n = 1 and x = 1</li>
-                  <li>After the second pass: n = 2 and x = 3</li>
-                  <li>After the third pass: n = 3 and x = 6</li>
-                </ul>
-                <p>
-                  After completing the third pass, the condition n &lt; 3 is no longer
-                  true, so the loop terminates.
-                </p>
-              </article>
-            </section>
-            <section class="main-section" id="Function_declarations">
-              <header>Function declarations</header>
-              <article>
-                A function definition (also called a function declaration, or function
-                statement) consists of the function keyword, followed by:
-          
-                <ul>
-                  <li>The name of the function.</li>
-                  <li>
-                    A list of arguments to the function, enclosed in parentheses and
-                    separated by commas.
-                  </li>
-                  <li>
-                    The JavaScript statements that define the function, enclosed in curly
-                    brackets, { }.
-                  </li>
-                </ul>
-                <p>
-                  For example, the following code defines a simple function named square:
-                </p>
-          
-                <code>function square(number) { return number * number; }</code>
-                <p>
-                  The function square takes one argument, called number. The function
-                  consists of one statement that says to return the argument of the
-                  function (that is, number) multiplied by itself. The return statement
-                  specifies the value returned by the function.
-                </p>
-                <code>return number * number;</code>
-                <p>
-                  Primitive parameters (such as a number) are passed to functions by
-                  value; the value is passed to the function, but if the function changes
-                  the value of the parameter, this change is not reflected globally or in
-                  the calling function.
-                </p>
-              </article>
-            </section>
-            <section class="main-section" id="Reference">
-              <header>Reference</header>
-              <article>
-                <ul>
-                  <li>
-                    All the documentation in this page is taken from
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a>
-                  </li>
-                </ul>
-              </article>
-            </section>
-          </main>
+      <section class="main-section" id="Hello React">
+        <header>Hello React</header>
+        <article>
+          <p>
+            As its official tagline states, React is a library for building user interfaces. React is not a framework –
+            it's not even exclusive to the web. It's used with other libraries to render to certain environments. For
+            instance, React Native can be used to build mobile applications.
+          </p>
+
+          <p>
+            To build for the web, developers use React in tandem with ReactDOM. React and ReactDOM are often discussed
+            in the same spaces as — and utilized to solve the same problems as — other true web development frameworks.
+            When we refer to React as a "framework", we’re working with that colloquial understanding.
+          </p>
+          <p>React's primary goal is to minimize the bugs that occur when developers are building UIs. It does this
+            through the use of components — self-contained, logical pieces of code that describe a portion of the user
+            interface. These components can be composed together to create a full UI, and React abstracts away much of
+            the rendering work, leaving you to concentrate on the UI design.</p>
+        </article>
+      </section>
+      <section class="main-section" id="How does React use JavaScript?">
+        <header>How does React use JavaScript?</header>
+        <article>
+          <ul>
+            <li>
+              <p>React utilizes features of modern JavaScript for many of its patterns. Its biggest departure from
+                JavaScript comes with the use of JSX syntax. JSX extends JavaScript's syntax so that HTML-like code can
+                live
+                alongside it. For example:</p>
+              <code>const heading = /h1/Mozilla Developer Network /h1/;</code>
+              <p>This heading constant is known as a JSX expression. React can use it to render that /h1/ tag in our
+                app.Suppose we wanted to wrap our heading in a /header/ tag, for semantic reasons? The JSX approach
+                allows us to nest our elements within each other, just like we do with HTML:</p>
+              <code>const header = (
+                /header/
+                /h1/ Mozilla Developer Network /h1/
+                /header/
+              </code>
+            </li>
+            <p>Of course, your browser can't read JSX without help. When compiled (using a tool like Babel or Parcel),
+              our header expression would look like this:</p>
+            <li><code>const header = React.createElement("header", null,
+                React.createElement("h1", null, "Mozilla Developer Network")
+                );</code></li>
+            <li>
+              Some programming experience. If you are new to programming, try one of
+              the tutorials linked on the main page about JavaScript.
+            </li>
+            <p>It's possible to skip the compilation step and use React.createElement() to write your UI yourself. In
+              doing this, however, you lose the declarative benefit of JSX, and your code becomes harder to read.
+              Compilation is an extra step in the development process, but many developers in the React community think
+              that the readability of JSX is worthwhile. Plus, popular tooling makes the JSX-to-JavaScript compilation
+              part of its setup process. You don't have to configure compilation yourself unless you want to.
+
+              Because JSX is a blend of HTML and JavaScript, some developers find it intuitive. Others say that its
+              blended nature makes it confusing. Once you're comfortable with it, however, it will allow you to build
+              user interfaces more quickly and intuitively, and allow others to better understand your codebase at a
+              glance.</p>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Setting up your first React app">
+        <header>Setting up your first React app</header>
+        <article>
+          <p>
+            There are many ways to use React, but we're going to use the command-line interface (CLI) tool
+            create-react-app, as mentioned earlier, which expedites the process of developing a React application by
+            installing some packages and creating some files for you, handling the tooling described above.It's possible
+            to add React to a website without create-react-app by copying some /script/ elements into an HTML file, but
+            the create-react-app CLI is a common starting point for React applications. Using it will allow you to spend
+            more time building your app, and less time fussing with setup.
+          </p>
+          <ul>
+            <li>Requirements</li>
+            <p>In order to use create-react-app, you need to have Node.js installed. It's recommended that you use the
+              long-term support (LTS) version. Node includes npm (the node package manager), and npx (the node package
+              runner) </p>
+            <p>You may also use the Yarn package manager as an alternative, but we'll assume you are using npm in this
+              set of tutorials. See Package management basics for more information on npm and yarn.</p>
+            <p>If you're using Windows, you will need to install some software to give you parity with Unix/macOS
+              terminal in order to use the terminal commands mentioned in this tutorial. Gitbash (which comes as part of
+              the git for Windows toolset) or Windows Subsystem for Linux (WSL) are both suitable. See Command line
+              crash course for more information on these, and on terminal commands in general.
+
+              Also bear in mind that React and ReactDOM produce apps that only work on a fairly modern set of browsers —
+              IE9+ by way of some polyfills. It is recommended that you use a modern browser like Firefox, Microsoft
+              Edge, Safari, or Chrome when working through these tutorials.</p>
+            <li>Initializing your app</li>
+            <p>create-react-app takes one argument: the name you'd like to give your app. create-react-app uses this
+              name to make a new directory, then creates the necessary files inside it. Make sure you cd to the place
+              you'd like your app to live on your hard drive, then run the following in your terminal:</p>
+            <code>npx create-react-app moz-todo-react</code>
+            <ul>
+              <p>This creates a moz-todo-react directory, and does several things inside it:</p>
+              <li>Installs some npm packages essential to the functionality of the app.</li>
+              <li>Writes scripts for starting and serving the application.</li>
+              <li>Creates a structure of files and directories that define the basic app architecture.</li>
+              <li>Initializes the directory as a git repository, if you have git installed on your computer.</li>
+            </ul>
+            <code>Note: if you have the yarn package manager installed, create-react-app will default to using it
+              instead of npm. If you have both package managers installed and explicitly want to use NPM, you can add
+              the flag --use-npm when you run create-react-app:<code>npx create-react-app moz-todo-react
+                --use-npm</code></code>
+            <p>create-react-app will display a number of messages in your terminal while it works; this is normal! This
+              might take a few minutes, so now might be a good time to go make a cup of tea.
+
+              When the process is complete, cd into the moz-todo-react directory and run the command npm start. The
+              scripts installed by create-react-app will start being served at a local server at localhost:3000, and
+              open the app in a new browser tab. Your browser will display something like this:</p>
+            <img
+              src="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started/default-create-react-app.png"
+              alt="react app">
+            <li>Application structure</li>
+            <p>create-react-app gives us everything we need to develop a React application. Its initial file structure
+              looks like this:</p>
+            <code>moz-todo-react
+              ├── README.md
+              ├── node_modules
+              ├── package.json
+              ├── package-lock.json
+              ├── .gitignore
+              ├── public
+              │ ├── favicon.ico
+              │ ├── index.html
+              │ └── manifest.json
+              └── src
+              ├── App.css
+              ├── App.js
+              ├── App.test.js
+              ├── index.css
+              ├── index.js
+              ├── logo.svg
+              └── serviceWorker.js
+            </code>
+            <p>The src directory is where we'll spend most of our time, as it's where the source code for our
+              application lives.</p>
+            <p>The public directory contains files that will be read by your browser while you're developing the app the
+              most important of these is index.html.React injects your code into this file so that your browser can run
+              it. There's some other markup that helps create-react-app function, so take care not to edit it unless you
+              know what you're doing. You very much should change the text inside the /title/ element in this file
+              to reflect the title of your application. Accurate page titles are important for accessibility!</p>
+            <p>The package.json file contains information about our project that Node.js/npm uses to keep it organized.
+              This file is not unique to React applications; create-react-app merely populates it. You don't need to
+              understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you
+              can read What is the file `package.json`? on NodeJS.org</p>
+
+          </ul>
+
+
+        </article>
+      </section>
+      <section class="main-section" id="Hello_world">
+        <header>Exploring our first React component — App</header>
+        <article>
+          In React, a component is a reusable module that renders a part of our app. These parts can be big or small,
+          but they are usually clearly defined: they serve a single, obvious purpose.
+          <p>Let's open src/App.js, since our browser is prompting us to edit it. This file contains our first
+            component, App, and a few other lines of code:</p>
+          <code>import React from 'react';
+            import logo from './logo.svg';
+            import './App.css';
+
+            function App() {
+            return (
+            /div className="App"/
+            /header className="App-header">
+            /img src={logo} className="App-logo" alt=logo /
+            /p/
+            Edit /code/src/App.js</code> and save to reload.
+          /p/
+          /a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+          Learn React
+          /a/
+          /header
+          /div/
+          );
+          }
+          export default App;
+          </code>
+          <p>The App.js file consists of three main parts: some import statements at the top, the App component in the
+            middle, and an export statement at the bottom. Most React components follow this pattern.</p>
+          <ul>
+            <li>Import statements</li>
+            <p>The import statements at the top of the file allow App.js to use code that has been defined elsewhere.
+              Let's look at these statements more closely.</p>
+            <code>import React from 'react';
+              import logo from './logo.svg';
+              import './App.css';</code>
+            <p>The first statement imports the React library itself. Because React turns the JSX we write into
+              React.createElement(), all React components must import the React module. If you skip this step, your
+              application will produce an error.</p>
+            <p>The second statement imports a logo from './logo.svg'. Note the use of ./ at the beginning of the path,
+              and
+              the .svg extension at the end — these tell us that the file is local and that it is not a JavaScript file.
+              Indeed, the logo.svg file lives in our source directory.</p>
+            <p>We don't write a path or extension when importing the React module — this is not a local file; instead,
+              it
+              is listed as a dependency in our package.json file. Be careful of this distinction as you work through
+              this
+              lesson!</p>
+            <p>The third statement imports the CSS related to our App component. Note that there is no variable name and
+              no from directive. This particular import syntax is not native to JavaScript module syntax — it comes from
+              Webpack, the tool create-react-app uses to bundle all our JavaScript files together and serve them to the
+              browser.</p>
+            <li>The App component</li>
+            <p>After the imports, we have a function named App. Whereas most of the JavaScript community prefers
+              camel-case names like helloWorld, React components use pascal-case variable names, like HelloWorld, to
+              make it clear that a given JSX element is a React component, and not a regular HTML tag. If you were to
+              rename the App function to app, your browser would show you an error.</p>
+            <p>Let's look at App more closely.</p>
+            <code>function App() {
+              return (
+              /div className="App"/
+              /header className="App-header"/
+              /img src={logo} className="App-logo" alt="logo" /
+              /p/
+              Edit /code/ src/App.js /code/and save to reload.
+              /p/
+              /a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer"/
+              Learn React
+              /a/
+              /header/
+              /div/
+              );
+              }</code>
+            <p>The App function returns a JSX expression. This expression defines what your browser ultimately renders
+              to the DOM./p/
+              /p/Some elements in the expression have attributes, which are written just like in HTML, following a
+              pattern of attribute="value". On line 3, the opening /div/ tag has a className attribute. This is the same
+              as the class attribute in HTML, but because JSX is JavaScript, we can't use the word class — it's
+              reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in
+              our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the
+              same kind of reason. We'll cover them as we encounter them.</p>
+            <p>Your App component should now look like this:</p>
+            <code>function App() {
+              return (
+              /div className="App">
+              /header className="App-header">
+              /img src={logo} className="App-logo" alt="logo"/
+              /p/
+              Hello, World!
+              /p/
+              /header/
+              /div/
+              );
+              }</code>
+            <li>Export statements</li>
+            <p>At the very bottom of the App.js file, the statement export default App makes our App component available
+              to other modules.</p>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Variables">
+        <header>Interrogating the index</header>
+        <p>
+          Let’s open src/index.js, because that's where the App component is being used. This file is the entry point
+          for our app, and it initially looks like this:
+        </p>
+        <code>import React from 'react';
+          import ReactDOM from 'react-dom';
+          import './index.css';
+          import App from './App';
+          import * as serviceWorker from './serviceWorker';
+
+          ReactDOM.render(
+          /React.StrictMode/
+          /App /
+          /React.StrictMode/,
+          document.getElementById('root')
+          );
+
+          // If you want your app to work offline and load faster, you can change
+          // unregister() to register() below. Note this comes with some pitfalls.
+          // Learn more about service workers: https://bit.ly/CRA-PWA
+          serviceWorker.unregister();</code>
+        <p>
+          As with App.js, the file starts by importing all the JS modules and other assets it needs to run.
+          src/index.css holds global styles that are applied to our whole app. We can also see our App component
+          imported here; it is made available for import thanks to the export statement at the bottom of App.js.
+        </p>
+        <p>Line 7 calls React’s ReactDOM.render() function with two arguments:</p>
+        <ul>
+          <li>
+            The component we want to render,
+            /App/ in this case.
+          </li>
+          <li>The DOM element inside which we want the component to be rendered, in this case the element with an ID of
+            root. If you look inside public/index.html, you'll see that this is a /div/ element just inside the /body/
+          </li>
+        </ul>
+        <p>All of this tells React that we want to render our React application with the App component as the root, or
+          first component.</p>
+        <p>Service workers are interesting pieces of code that help application performance and allow features of your
+          web applications to work offline, but they’re not in scope for this article. You can delete line 5, as well as
+          most of the code below it.</p>
+        <p>Your final index.js file should look like this</p>
+        <code>import React from 'react';
+          import ReactDOM from 'react-dom';
+          import './index.css';
+          import App from './App';
+
+          ReactDOM.render App /, document.getElementById('root');</code>
+      </section>
+      <section class="main-section" id="Variables and props ">
+        <header>Variables and props</header>
+        <article>
+          Next, we'll use a few of our JavaScript skills to get a bit more comfortable editing components and working
+          with data in React. We'll talk about how variables are used inside JSX, and introduce props, which are a way
+          of passing data into a component (which can then be accessed using variables).
+          <p>
+            <u>Variables in JSX</u>, <p>Back in App.js, let’s focus on line 9:</p> <code>/img src={logo}
+              className="App-logo" alt="logo" /></code> Here, the /img /> tag's src attribute value is in curly braces.
+            This is how JSX recognizes variables. React will see {logo}, know you are referring to the logo import on
+            line 2 of our app, then retrieve the logo file and render it.
+          </p>
+          <p>
+            Let's try making a variable of our own. Before the return statement of App, add const subject = 'React';.
+            Your App component should now look like this:
+            <code>function App() {
+              const subject = "React";
+              return (
+              /div className="App">
+              /header className="App-header">
+              /img src={logo} className="App-logo" alt="logo" />
+              /p/
+              Hello, World!
+              /p/
+              /header/
+              /div/
+              );
+              }</code>
+          </p>
+          <p>
+            Change line 8 to use our subject variable instead of the word "world", like this:<code> function App() {
+              const subject = "React";
+              return (
+              /div className="App">
+              /header className="App-header">
+              /img src={logo} className="App-logo" alt="logo" />
+              /p>
+              Hello, {subject}!
+              /p/
+              /header/
+              /div/
+              );
+              }</code> When you save, your browser should display "Hello, React!" instead of "Hello, world!"
+          </p>
+          <p>Variables are convenient, but the one we've just set doesn’t make great use of React's features. That's
+            where props come in.</p>
+          <p><u>Component props</u></p>
+          <p>A prop is any data passed into a React component. React props are comparable to HTML attributes. Where HTML
+            elements have attributes, React components have props. Props are written inside component calls, and use the
+            same syntax as HTML attributes — prop="value". In React, dataflow is unidirectional: props can only be
+            passed from Parent components down to Child components; and props are read-only.</p>
+          <p>Let’s open index.js and give our /App/ call its first prop.</p>
+          <p>Add a prop of subject to the
+            <App /> component call, with a value of Clarice. When you are done, your code should look something like
+            this:
+            <code>function App() {
+              const subject = "React";
+              return (
+              // return statement
+              );
+              }</code></p>
+          <p>Change the signature of the App function so that it accepts props as a parameter, and delete the subject
+            const. Just like any other function parameter, you can put props in a console.log() to print it to your
+            browser's console. Go ahead and do that before the return statement, like so:
+            <code>function App(props) {
+              console.log(props);
+              return (
+              // return statement
+              );
+              }</code>
+          </p>
+          <p>Save your file and check your browser's JavaScript console. You should see something like this logged:
+            <code>Object { subject: "Clarice" }</code>
+          </p>
+          <p>The object property subject corresponds to the subject prop we added to our /App/ component call, and the
+            string Clarice corresponds to its value. Component props in React are always collected into objects in this
+            fashion.</p>
+          <p>Now that subject is one of our props, let's utilize it in App.js. Change the subject constant so that,
+            instead of defining it as the string React, you are reading the value of props.subject. You can also delete
+            your console.log() if you want.
+            <code>function App(props) {
+              const subject = props.subject;
+              return (
+              // return statement
+              );
+              }</code>
+          </p>
+          <p>When you save, the app should now greet you with "Hello, Clarice!". If you return to index.js, edit the
+            value of subject, and save, your text will change.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Summary">
+        <header>Summary</header>
+        <article>
+          <p>
+            This brings us to the end of our initial look at React, including how to install it locally, creating a
+            starter app, and how the basics work. In the next article, we'll start building our first proper application
+            — a todo list. Before we do that, however, let's recap some of the things we’ve learned.
+          </p>
+
+          <p>
+            In React:
+          </p>
+          <ul>
+            <li>
+              Components can import modules they need and must export themselves at the bottom of their files.
+            </li>
+            <li>Component functions are named with PascalCase.</li>
+            <li>You can read JSX variables by putting them between curly braces, like {so}.</li>
+            <li>Some JSX attributes are different than HTML attributes so that they don't conflict with JavaScript
+              reserved words. For example, class in HTML translates to className in JSX. Note that multi-word attributes
+              are camel-cased</li>
+            <li>Props are written just like attributes inside component calls and are passed into components.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li>
+              All the documentation in this page is taken from
+              <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started#hello_react"
+                target="_blank">MDN</a>
+            </li>
+          </ul>
+        </article>
+      </section>
     </main>
+  </main>
 </body>
+
 </html>
